@@ -15,8 +15,10 @@ type Props = {
 const Heading = ({ title }: Props) => {
   if (title.type === "image") {
     return (
-      <h1 className="text-xl font-bold">
-        <img src={title.image} alt="logo" className="w-8" />
+      <h1 className="text-xl font-bold px-4">
+        <a href="/">
+          <img src={title.image} alt="logo" className="max-h-[5rem]" />
+        </a>
       </h1>
     );
   }

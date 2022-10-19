@@ -1,0 +1,70 @@
+{
+  "status": "ok",
+  "data": {
+    "contents": [
+      {
+        "id": 1,
+        "title": "Apa itu FINTAG?",
+        "text": "FINTAG adalah platform layanan pinjam meminjam uang berbasis teknologi informasi yang mempertemukan peminjam dengan pemberi pinjaman.\nFINTAG merupakan pasar permodalan online bagi pelaku UMKM Indonesia."
+      },
+      {
+        "id": 2,
+        "title": "Kenapa FINTAG?",
+        "lists": [
+          {
+            "icon": "mail_send",
+            "title": "Proses Lebih Cepat",
+            "text": "Proses pengajuan pinjaman lebih cepat dengan pengembangan teknologi terkini."
+          },
+          {
+            "icon": "coins",
+            "title": "Suku Bunga",
+            "text": "Suku bunga kredit yang ditawarkan bervariasi tergantung dari profil resiko calon peminjam."
+          },
+          {
+            "icon": "global",
+            "title": "Jangkauan Luas",
+            "text": "Menjangkau semua lapisan pelaku usaha yang belum tersentuh akses permodalan."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Statistik",
+        "stats": [
+          {
+            "icon": "chart",
+            "title": "TKB",
+            "amount": 1
+          },
+          {
+            "icon": "currency",
+            "title": "Total Outstanding Pinjaman",
+            "amount": 2309527823
+          },
+          {
+            "icon": "currency",
+            "title": "Total Pinjaman",
+            "amount": 22236500000
+          },
+          {
+            "icon": "currency",
+            "title": "Pinjaman Tahun Berjalan",
+            "amount": 5419500000
+          },
+          {
+            "icon": "user",
+            "title": "Total Peminjam",
+            "amount": 6324
+          },
+          {
+            "icon": "user_active",
+            "title": "Jumlah Peminjam Aktif",
+            "amount": 103
+          }
+        ]
+      }
+    ]
+  },
+  "errors": []
+}

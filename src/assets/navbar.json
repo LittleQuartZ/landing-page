@@ -2,14 +2,14 @@
   "status": "ok",
   "data": {
     "title": {
-      "type": "text",
-      "text": "Appli",
-      "image": "https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png"
+      "type": "image",
+      "text": "Fintag",
+      "image": "https://fintag.id/img/fintag_empower.jpeg"
     },
     "navigations": [
-      { "link": "/dashboard", "text": "Dashboard" },
-      { "link": "/profile", "text": "Profile" },
-      { "link": "/pricing", "text": "Pricing" }
+      { "id": 1, "link": "/dashboard", "text": "Dashboard" },
+      { "id": 2, "link": "/profile", "text": "Profile" },
+      { "id": 3, "link": "/pricing", "text": "Pricing" }
     ]
   },
   "errors": []

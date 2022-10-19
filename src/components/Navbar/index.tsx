@@ -12,29 +12,29 @@ const Navbar = () => {
   const { title, navigations } = navDataJSON.data;
 
   return (
-    <>
-      <nav className={`shadow p-6 flex`}>
-        <Heading title={title} />
-        <button className="ml-auto" onClick={() => setOpened(!opened)}>
-          {opened ? (
-            <RiCloseLine className="text-2xl" />
-          ) : (
-            <RiMenuLine className="text-2xl" />
-          )}
-        </button>
-      </nav>
+    <nav
+      className={`shadow bg-white grid grid-cols-2 items-center z-20 sticky top-0`}
+    >
+      <Heading title={title} />
+      <button className="ml-auto p-6" onClick={() => setOpened(!opened)}>
+        {opened ? (
+          <RiCloseLine className="text-2xl" />
+        ) : (
+          <RiMenuLine className="text-2xl" />
+        )}
+      </button>
 
       {opened && (
-        <section className="flex flex-col justify-center items-center shadow-md">
+        <section className="flex flex-col col-span-2 justify-center absolute top-full items-center shadow-md w-full z-10 bg-white">
           {navigations.map((nav) => (
-            <Link nav={nav} />
+            <Link key={nav.id} nav={nav} />
           ))}
           <button className="hover:shadow-lg active:scale-95 font-bold text-green-700 transition-all py-4 w-[95%] text-center bg-green-300 my-4 rounded">
             Register Now!
           </button>
         </section>
       )}
-    </>
+    </nav>
   );
 };
 
