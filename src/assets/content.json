@@ -63,6 +63,18 @@
             "amount": 103
           }
         ]
+      },
+      {
+        "id": 4,
+        "title": "Partner Kami",
+        "images": [
+          "https://fintag.id/img/lpmukp-logo.png",
+          "https://fintag.id/img/bni-logo.png",
+          "https://fintag.id/img/peruri-logo.png",
+          "https://fintag.id/img/pefindo-logo.png",
+          "https://fintag.id/img/simasinsurtech-logo-black.png",
+          "https://fintag.id/img/colmitra.png"
+        ]
       }
     ]
   },

@@ -2,6 +2,10 @@ import { type ContentsData } from "../../App";
 import ListItem from "./ListItem";
 import StatItem from "./StatItem";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
+
 type Props = {
   content: ContentsData;
 };
@@ -27,6 +31,24 @@ const Content = ({ content }: Props) => {
             {content.stats.map((stat) => (
               <StatItem stat={stat} />
             ))}
+          </div>
+        )}
+
+        {content.images && (
+          <div>
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 0.1, disableOnInteraction: false }}
+              slidesPerView={3}
+              loop
+              speed={3000}
+            >
+              {content.images.map((image) => (
+                <SwiperSlide className="py-8 px-4">
+                  <img src={image} className="w-36 h-full" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         )}
       </article>
