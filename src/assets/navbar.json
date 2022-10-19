@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "data": {
+    "title": {
+      "type": "text",
+      "text": "Appli",
+      "image": "https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png"
+    },
+    "navigations": [
+      { "link": "/dashboard", "text": "Dashboard" },
+      { "link": "/profile", "text": "Profile" },
+      { "link": "/pricing", "text": "Pricing" }
+    ]
+  },
+  "errors": []
+}

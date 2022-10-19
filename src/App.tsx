@@ -1,5 +1,11 @@
-const App = () => {
-  return <div>Hello World</div>
-}
+import Navbar from "./components/Navbar";
 
-export default App
+const App = () => {
+  return (
+    <div id="App">
+      <Navbar />
+    </div>
+  );
+};
+
+export default App;
