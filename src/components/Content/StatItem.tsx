@@ -5,6 +5,7 @@ import {
   RiUserFill,
   RiUserFollowFill,
 } from "react-icons/ri";
+import CountUp from "react-countup";
 
 const StatItem = ({
   stat,
@@ -16,15 +17,14 @@ const StatItem = ({
   };
 }) => {
   let Icon = RiLoader3Fill;
-  let amount: number | string = stat.amount;
+  let amount = stat.amount;
 
   if (stat.icon === "chart") {
     Icon = RiBarChartFill;
-    amount = `${amount * 100}%`;
+    amount *= 100;
   }
   if (stat.icon === "currency") {
     Icon = RiCurrencyFill;
-    amount = `Rp. ${amount.toLocaleString("id-EN")}`;
   }
   if (stat.icon === "user") Icon = RiUserFill;
   if (stat.icon === "user_active") Icon = RiUserFollowFill;
@@ -33,7 +33,17 @@ const StatItem = ({
     <div className="py-4 gap-2 flex flex-col items-center justify-start text-center">
       <span className="flex text-indigo-500 font-bold items-center gap-2 text-xl">
         <Icon />
-        <h2>{amount}</h2>
+        <CountUp
+          start={0}
+          duration={0.5}
+          end={amount}
+          {...(stat.icon === "currency" && { prefix: "Rp. " })}
+          {...(stat.icon === "chart" && { suffix: "%" })}
+          enableScrollSpy
+          separator=","
+        >
+          {({ countUpRef }) => <span ref={countUpRef} />}
+        </CountUp>
       </span>
       <p className="text-lg">{stat.title}</p>
     </div>
