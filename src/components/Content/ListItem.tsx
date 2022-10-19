@@ -30,7 +30,7 @@ const ListItem = ({ listItem }: Props) => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center py-8 px-6 mx-2 bg-white gap-4 rounded-md shadow-md transition hover:ring-2 hover:ring-blue-300 first:mt-0 mt-8"
+      className="flex flex-col items-center justify-center py-8 px-6 mx-2 bg-white gap-4 rounded-md shadow-md transition hover:ring-2 hover:ring-blue-300 first:mt-0 mt-8 md:mt-0"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

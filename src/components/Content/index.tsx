@@ -16,18 +16,42 @@ const Content = ({ content }: Props) => {
       <article key={content.title} className="container mx-auto py-6 px-4">
         <h1 className="text-3xl font-bold text-center mb-6">{content.title}</h1>
 
-        {content.text &&
-          content.text.split("\n").map((text, index) => (
-            <p key={index} className="px-4 first:mt-6 mt-6">
-              {text}
-            </p>
-          ))}
+        <section className="flex justify-center gap-2">
+          <div className="basis-1/2">
+            {content.text &&
+              content.text.split("\n").map((text, index) => (
+                <p key={index} className="px-4 first:mt-6 mt-6 text-lg">
+                  {text}
+                </p>
+              ))}
+          </div>
 
-        {content.lists &&
-          content.lists.map((listItem) => <ListItem listItem={listItem} />)}
+          {content.embed &&
+            content.embed.map(
+              (embed) =>
+                embed.youtube && (
+                  <iframe
+                    className="w-1/2 h-[440px] block"
+                    src={embed.youtube}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )
+            )}
+        </section>
+
+        {content.lists && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-2">
+            {content.lists.map((listItem) => (
+              <ListItem listItem={listItem} />
+            ))}
+          </div>
+        )}
 
         {content.stats && (
-          <div className="grid-cols-2 grid gap-y-2">
+          <div className="grid-cols-2 md:grid-cols-3 grid gap-y-2">
             {content.stats.map((stat) => (
               <StatItem stat={stat} />
             ))}
@@ -38,8 +62,12 @@ const Content = ({ content }: Props) => {
           <div>
             <Swiper
               modules={[Autoplay]}
-              autoplay={{ delay: 0.1, disableOnInteraction: false }}
-              slidesPerView={3}
+              autoplay={
+                window.innerWidth < 720
+                  ? { delay: 0.1, disableOnInteraction: false }
+                  : false
+              }
+              slidesPerView={window.innerWidth < 720 ? 3 : 6}
               loop
               speed={3000}
             >

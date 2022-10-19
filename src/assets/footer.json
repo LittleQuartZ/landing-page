@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "data": {
+    "logo": "https://fintag.id/img/fintag_empower.jpeg",
+    "address": "Tifa Arum Realty Lantai 7\nJl. Kuningan Barat 1 No.26, RT.6/RW.1\nKuningan Barat, Kec. Mampang Prapatan\nKota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12710. (021) 2708 2000",
+    "menu": [
+      {
+        "title": "FINTAG",
+        "links": [
+          { "text": "Beranda", "link": "/beranda" },
+          { "text": "Ajukan Pinjaman", "link": "/pengajuan" },
+          { "text": "Beri Pinjaman", "link": "/pemberian" }
+        ]
+      },
+      {
+        "title": "FINTAG 2",
+        "links": [
+          { "text": "Beranda", "link": "/beranda" },
+          { "text": "Ajukan Pinjaman", "link": "/pengajuan" },
+          { "text": "Beri Pinjaman", "link": "/pemberian" }
+        ]
+      },
+      {
+        "title": "FINTAG 2",
+        "links": [
+          { "text": "Beranda", "link": "/beranda" },
+          { "text": "Ajukan Pinjaman", "link": "/pengajuan" },
+          { "text": "Beri Pinjaman", "link": "/pemberian" }
+        ]
+      }
+    ]
+  }
+}
