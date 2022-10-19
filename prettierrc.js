@@ -1,0 +1,1 @@
+/home/syahdan/Desktop/r/dotfiles/cfg/customchad/plugins/null-ls/prettierrc.js
