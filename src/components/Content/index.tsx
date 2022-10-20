@@ -16,7 +16,7 @@ const Content = ({ content }: Props) => {
       <article key={content.title} className="container mx-auto py-6 px-4">
         <h1 className="text-3xl font-bold text-center mb-6">{content.title}</h1>
 
-        <section className="flex justify-center gap-2">
+        <section className="flex flex-col md:flex-row justify-center gap-2">
           <div className="basis-1/2">
             {content.text &&
               content.text.split("\n").map((text, index) => (
@@ -31,7 +31,7 @@ const Content = ({ content }: Props) => {
               (embed) =>
                 embed.youtube && (
                   <iframe
-                    className="w-1/2 h-[440px] block"
+                    className="w-full md:w-1/2 mt-4 md:mt-0 h-[440px] block"
                     src={embed.youtube}
                     title="YouTube video player"
                     frameBorder="0"

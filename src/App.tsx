@@ -20,7 +20,7 @@ const App = () => {
         </section>
       </main>
 
-      <footer className="container mx-auto py-8 grid grid-cols-6">
+      <footer className="container mx-auto px-4 py-8 grid grid-cols-3 md:grid-cols-6">
         <section className="col-span-3">
           <img src={footerDataJSON.data.logo} className="w-48" />
           {footerDataJSON.data.address.split("\n").map((line) => (
